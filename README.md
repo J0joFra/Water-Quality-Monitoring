@@ -16,9 +16,9 @@ The project consists of three Python scripts:
   - Converts the 'Timestamp' column to datetime format and sets it as the index.
   - Generates time series plots for each remaining water quality parameter, showcasing trends over time.
 
-### 2. Script 2: Correlation Analysis and Scatter Plots
+### 2. **pearson_method.py** : Correlation Analysis and Scatter Plots
 
-- **File:** `correlation_and_scatter.py`
+- **File:** `pearson_method.py`
 - **Libraries Used:** `pandas`, `matplotlib`, `seaborn`
 - **Functionality:** This script performs the following tasks:
   - Loads the Brisbane water quality dataset from the CSV file.
@@ -54,8 +54,8 @@ pip install pandas matplotlib seaborn scikit-learn
 3. Open a terminal or command prompt and run each script using Python:
 
 ```bash
-python visualize_data.py
-python correlation_and_scatter.py
+python data_analisys.ipynb
+python pearson_method.py
 python predictive_model.py
 ```
 
@@ -63,7 +63,7 @@ python predictive_model.py
 
 ## Notes
 
-- Ensure that the CSV file path (`brisbane_water_quality.csv`) is correctly specified in each script (`visualize_data.py`, `correlation_and_scatter.py`, and `predictive_model.py`) to match the location where you have stored the dataset on your machine.
+- Ensure that the CSV file path (`brisbane_water_quality.csv`) is correctly specified in each script (`pearson_method.py`, `pearson_method.py`, and `predictive_model.py`) to match the location where you have stored the dataset on your machine.
 
 - Make sure your Python environment is set up correctly with the required libraries to avoid any dependency issues.
 
