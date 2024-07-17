@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.impute import SimpleImputer
+from sklearn.metrics import r2_score, mean_squared_error
 import matplotlib.pyplot as plt
 
 # Path to your CSV file
@@ -42,8 +43,16 @@ model.fit(X_train_imputed, y_train_imputed)
 # Predicting values for 2023 based on selected variables (for validation)
 predictions_2023 = model.predict(X_train_imputed)
 
+# Calculate R^2 score
+r2 = r2_score(df_2023[y_column], predictions_2023)
+print(f'R^2 Score: {r2:.2f}')
+
+# Calculate Mean Squared Error (MSE)
+mse = mean_squared_error(df_2023[y_column], predictions_2023)
+print(f'Mean Squared Error: {mse:.2f}')
+
 # Chlorophyll vs Dissolved Oxygen
-plt.figure(figsize=(16, 9))
+plt.figure(figsize=(12, 6))
 plt.scatter(df_2023['Chlorophyll'], df_2023['Dissolved Oxygen'], color='blue', label='Observed', alpha=0.5)
 plt.scatter(df_2023['Chlorophyll'], predictions_2023, color='red', label='Predicted', alpha=0.5)
 plt.title('Chlorophyll vs Dissolved Oxygen (2023)')
@@ -52,7 +61,7 @@ plt.ylabel('Dissolved Oxygen')
 plt.legend()
 
 # Temperature vs Dissolved Oxygen
-plt.figure(figsize=(16, 9))
+plt.figure(figsize=(12, 6))
 plt.scatter(df_2023['Temperature'], df_2023['Dissolved Oxygen'], color='blue', label='Observed', alpha=0.5)
 plt.scatter(df_2023['Temperature'], predictions_2023, color='red', label='Predicted', alpha=0.5)
 plt.title('Temperature vs Dissolved Oxygen (2023)')
@@ -61,7 +70,7 @@ plt.ylabel('Dissolved Oxygen')
 plt.legend()
 
 # Salinity vs Dissolved Oxygen
-plt.figure(figsize=(16, 9))
+plt.figure(figsize=(12, 6))
 plt.scatter(df_2023['Salinity'], df_2023['Dissolved Oxygen'], color='blue', label='Observed', alpha=0.5)
 plt.scatter(df_2023['Salinity'], predictions_2023, color='red', label='Predicted', alpha=0.5)
 plt.title('Salinity vs Dissolved Oxygen (2023)')
