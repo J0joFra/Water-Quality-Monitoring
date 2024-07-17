@@ -6,7 +6,7 @@ This project involves analyzing water quality data from Brisbane using Python an
 
 The project consists of three Python scripts:
 
-### 1. **data_analisys.ipynb** : Visualizing Time Series Data
+### 1. **data_analisys.ipynb**: Visualizing Time Series Data
 
 - **File:** `data_analisys.ipynb`
 - **Libraries Used:** `pandas`, `matplotlib`, `seaborn`
@@ -16,7 +16,7 @@ The project consists of three Python scripts:
   - Converts the 'Timestamp' column to datetime format and sets it as the index.
   - Generates time series plots for each remaining water quality parameter, showcasing trends over time.
 
-### 2. **pearson_method.py** : Correlation Analysis and Scatter Plots
+### 2. **pearson_method.py**: Correlation Analysis and Scatter Plots
 
 - **File:** `pearson_method.py`
 - **Libraries Used:** `pandas`, `matplotlib`, `seaborn`
@@ -63,11 +63,10 @@ python linear_regression.py
 
 ## Notes
 
-- Ensure that the CSV file path (`brisbane_water_quality.csv`) is correctly specified in each script (`pearson_method.py`, `pearson_method.py`, and `linear_regression.py`) to match the location where you have stored the dataset on your machine.
+- Ensure that the CSV file path (`brisbane_water_quality.csv`) is correctly specified in each script (`data_analisys.ipynb`, `pearson_method.py`, and `linear_regression.py`) to match the location where you have stored the dataset on your machine.
 
 - Make sure your Python environment is set up correctly with the required libraries to avoid any dependency issues.
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
