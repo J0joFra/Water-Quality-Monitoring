@@ -42,11 +42,8 @@ model.fit(X_train_imputed, y_train_imputed)
 # Predicting values for 2023 based on selected variables (for validation)
 predictions_2023 = model.predict(X_train_imputed)
 
-# Plotting observed vs predicted values for 2023
-plt.figure(figsize=(16, 12))
-
 # Chlorophyll vs Dissolved Oxygen
-plt.subplot(3, 1, 1)
+plt.figure(figsize=(16, 9))
 plt.scatter(df_2023['Chlorophyll'], df_2023['Dissolved Oxygen'], color='blue', label='Observed', alpha=0.5)
 plt.scatter(df_2023['Chlorophyll'], predictions_2023, color='red', label='Predicted', alpha=0.5)
 plt.title('Chlorophyll vs Dissolved Oxygen (2023)')
@@ -55,7 +52,7 @@ plt.ylabel('Dissolved Oxygen')
 plt.legend()
 
 # Temperature vs Dissolved Oxygen
-plt.subplot(3, 1, 2)
+plt.figure(figsize=(16, 9))
 plt.scatter(df_2023['Temperature'], df_2023['Dissolved Oxygen'], color='blue', label='Observed', alpha=0.5)
 plt.scatter(df_2023['Temperature'], predictions_2023, color='red', label='Predicted', alpha=0.5)
 plt.title('Temperature vs Dissolved Oxygen (2023)')
@@ -64,7 +61,7 @@ plt.ylabel('Dissolved Oxygen')
 plt.legend()
 
 # Salinity vs Dissolved Oxygen
-plt.subplot(3, 1, 3)
+plt.figure(figsize=(16, 9))
 plt.scatter(df_2023['Salinity'], df_2023['Dissolved Oxygen'], color='blue', label='Observed', alpha=0.5)
 plt.scatter(df_2023['Salinity'], predictions_2023, color='red', label='Predicted', alpha=0.5)
 plt.title('Salinity vs Dissolved Oxygen (2023)')
