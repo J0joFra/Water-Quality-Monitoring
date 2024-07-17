@@ -27,9 +27,9 @@ The project consists of three Python scripts:
   - Visualizes the correlation matrix using a heatmap for quick insights into parameter relationships.
   - Generates scatter plots to explore relationships between pairs of water quality parameters: Chlorophyll vs Dissolved Oxygen, Temperature vs pH, and Salinity vs Turbidity.
 
-### 3. Script 3: Predictive Modeling
+### 3. **linear_regression.py**: Predictive Modeling
 
-- **File:** `predictive_model.py`
+- **File:** `linear_regression.py`
 - **Libraries Used:** `pandas`, `sklearn`, `matplotlib`
 - **Functionality:** This script performs the following tasks:
   - Loads the Brisbane water quality dataset from the CSV file.
@@ -56,14 +56,14 @@ pip install pandas matplotlib seaborn scikit-learn
 ```bash
 python data_analisys.ipynb
 python pearson_method.py
-python predictive_model.py
+python linear_regression.py
 ```
 
 4. Each script will execute its respective analysis and generate plots to visualize different aspects of the Brisbane water quality data.
 
 ## Notes
 
-- Ensure that the CSV file path (`brisbane_water_quality.csv`) is correctly specified in each script (`pearson_method.py`, `pearson_method.py`, and `predictive_model.py`) to match the location where you have stored the dataset on your machine.
+- Ensure that the CSV file path (`brisbane_water_quality.csv`) is correctly specified in each script (`pearson_method.py`, `pearson_method.py`, and `linear_regression.py`) to match the location where you have stored the dataset on your machine.
 
 - Make sure your Python environment is set up correctly with the required libraries to avoid any dependency issues.
 
