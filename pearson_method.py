@@ -14,6 +14,20 @@ df['Timestamp'] = pd.to_datetime(df['Timestamp'])
 # Filter rows where the year is 2023
 df = df[df['Timestamp'].dt.year == 2023]
 
+names2=['Average Water Speed', 'Average Water Direction', 'Chlorophyll', 'Temperature',
+        'Dissolved Oxygen', 'Dissolved Oxygen (%Saturation)',  'pH',  'Salinity',  
+        'Specific Conductance', 'Turbidity', ]
+
+# Correlation Matrix
+correlation_matrix = df[names2].corr(method='pearson')
+correlation_matrix = correlation_matrix.round(3)
+
+# Plotting Correlation Matrix
+plt.figure(figsize=(16,10))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".3f", linewidths=.5)
+plt.title('Pearson Correlation Matrix')
+plt.show()
+
 # Set figure size for each individual plot
 plt.figure(figsize=(8, 6))
 
