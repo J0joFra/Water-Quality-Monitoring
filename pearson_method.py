@@ -23,16 +23,15 @@ plt.title('Pearson Correlation Matrix')
 plt.show()
 
 # Definisci le colonne da utilizzare per i grafici di dispersione
-columns_to_plot = ['Average Water Speed', 'Chlorophyll', 'Temperature', 'Dissolved Oxygen', 'pH']
+columns_to_plot = ['Dissolved Oxygen',]
 
 # Creazione dei grafici di dispersione
 plt.figure(figsize=(18, 12))
 for i, column in enumerate(columns_to_plot, start=1):
-    plt.subplot(3, 2, i)
-    plt.scatter(df[column], df['Salinity'], alpha=0.5)
-    plt.title(f'Scatter plot: {column} vs Salinity')
+    plt.scatter(df[column], df['Chlorophyll'], alpha=0.5)
+    plt.title(f'Scatter plot: {column} vs Chlorophyll')
     plt.xlabel(column)
-    plt.ylabel('Salinity')
+    plt.ylabel('Chlorophyll')
 
 plt.tight_layout()
 plt.show()
