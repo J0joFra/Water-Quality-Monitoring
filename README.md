@@ -6,9 +6,9 @@ This project involves analyzing water quality data from Brisbane using Python an
 
 The project consists of three Python scripts:
 
-### 1. Script 1: Visualizing Time Series Data
+### 1. **data_analisys.ipynb** : Visualizing Time Series Data
 
-- **File:** `visualize_data.py`
+- **File:** `data_analisys.ipynb`
 - **Libraries Used:** `pandas`, `matplotlib`, `seaborn`
 - **Functionality:** This script performs the following tasks:
   - Loads the Brisbane water quality dataset from a CSV file.
